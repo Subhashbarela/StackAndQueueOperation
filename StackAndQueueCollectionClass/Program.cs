@@ -19,7 +19,7 @@ namespace StackAndQueueCollectionClass
             queue.Enqueue(56);
             queue.Enqueue(30);
             queue.Enqueue(70);
-            Console.WriteLine("1: Create Stack \n2: Pop And Peek \n3: Create Queue");
+            Console.WriteLine("1: Create Stack \n2: Pop And Peek \n3: Create Queue \n4: Dequeue Operation");
             Console.WriteLine("Enter the choice");
             int choice=int.Parse(Console.ReadLine());
             switch (choice)
@@ -42,6 +42,14 @@ namespace StackAndQueueCollectionClass
                     }
                 case 3:
                     {                       
+                        Console.WriteLine("...........................\n");
+                        queue.Display();
+                        break;
+                    }
+                case 4:
+                    {
+                        queue.Display();
+                        queue.Dequeue();
                         Console.WriteLine("...........................\n");
                         queue.Display();
                         break;
