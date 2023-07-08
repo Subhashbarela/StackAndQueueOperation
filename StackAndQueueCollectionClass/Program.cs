@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +15,11 @@ namespace StackAndQueueCollectionClass
             stack.push(56);
             stack.push(30);
             stack.push(70);
-            Console.WriteLine("1: Create Stack \n2: Pop And Peek");
+            Queue queue = new Queue(); 
+            queue.Enqueue(56);
+            queue.Enqueue(30);
+            queue.Enqueue(70);
+            Console.WriteLine("1: Create Stack \n2: Pop And Peek \n3: Create Queue");
             Console.WriteLine("Enter the choice");
             int choice=int.Parse(Console.ReadLine());
             switch (choice)
@@ -33,6 +38,12 @@ namespace StackAndQueueCollectionClass
                         stack.pop();
                         // stack.peek();
                         stack.Display();
+                        break;
+                    }
+                case 3:
+                    {                       
+                        Console.WriteLine("...........................\n");
+                        queue.Display();
                         break;
                     }
                 default:
