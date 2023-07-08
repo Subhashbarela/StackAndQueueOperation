@@ -29,6 +29,41 @@ namespace StackAndQueueCollectionClass
             this.top = node;
             //Console.WriteLine("{0} pushed to stack ", value);
         }
+        internal void peek()
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("Stack is empty ");
+                return;
+            }
+            else
+            {
+                Console.WriteLine("{0}  is in the top of the stack ", this.top.data);
+            }
+        }
+        internal void pop()
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("Stack is empty Deletion is not posible ");
+            }
+            else
+            {
+                Console.Write("Value {0} is popped...! \n\n", this.top.data);
+                this.top = this.top.next;
+            }
+        }
+        internal void IsEmpty()
+        {
+            if (this.top != null)
+            {
+                while (this.top != null)
+                {
+                    peek();
+                    pop();
+                }
+            }
+        }
         internal void Display()
         {
             Node temp = this.top;

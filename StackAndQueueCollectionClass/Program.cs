@@ -14,7 +14,7 @@ namespace StackAndQueueCollectionClass
             stack.push(56);
             stack.push(30);
             stack.push(70);
-            Console.WriteLine("1: Create Stack");
+            Console.WriteLine("1: Create Stack \n2: Pop And Peek");
             Console.WriteLine("Enter the choice");
             int choice=int.Parse(Console.ReadLine());
             switch (choice)
@@ -22,6 +22,16 @@ namespace StackAndQueueCollectionClass
                 case 1:
                     {
                         Console.WriteLine("............................");
+                        stack.Display();
+                        break;
+                    }
+                case 2:
+                    {
+                        
+                        stack.Display();
+                        Console.WriteLine("\n...........................\n");
+                        stack.pop();
+                        // stack.peek();
                         stack.Display();
                         break;
                     }
